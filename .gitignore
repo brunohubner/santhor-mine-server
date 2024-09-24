@@ -1,0 +1,15 @@
+/data/*
+
+*_backup.zip
+
+!/data/*.json
+!/data/*.txt
+!/data/*.yml
+!/data/*.yaml
+!/data/*.properties
+!/data/*.env
+!/data/*.png
+
+!/data/plugins/
+
+/data/*.tmp.*

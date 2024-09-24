@@ -1,0 +1,25 @@
+services:
+  santhor-mine-server:
+    container_name: santhor-mine-server
+    image: itzg/minecraft-server
+    ports:
+      - 25560:25565
+
+    environment:
+      EULA: "TRUE"
+      MEMORY: 8G
+      VERSION: '1.21.1'
+      TYPE: SPIGOT
+
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+
+    volumes:
+      - ./data:/data
+    networks: 
+      - santhor-mine-server
+
+networks:
+  santhor-mine-server:
+    driver: bridge
